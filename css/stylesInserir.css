@@ -1,0 +1,28 @@
+#inputName, #inputEmail {
+  width: 50rem;
+}
+
+ul {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding-bottom: 5px;
+}
+
+#mensagem {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #inputName, #inputEmail {
+    width: 100%;
+  }
+
+  .form-footer {
+    display: flex;
+  }
+
+  #mensagem {
+    position: absolute;
+    left: 8rem;
+    bottom: 0.1rem;
+  }
+}
