@@ -46,10 +46,10 @@ function criarContato(event) {
   else 
     ativo = false;
 
-  var url = 'https://api.box3.work/api/Contato';
+  var api = 'https://api.box3.work/api/Contato';
 
   var xhttp = new XMLHttpRequest();
-  xhttp.open('POST', url, true);
+  xhttp.open('POST', api, true);
   xhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   xhttp.onreadystatechange = () => { 
     if (xhttp.readyState == 4 && xhttp.status == 200) {

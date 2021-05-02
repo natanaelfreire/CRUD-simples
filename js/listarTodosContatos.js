@@ -1,7 +1,7 @@
-var url = 'https://api.box3.work/api/Contato';
+var api = 'https://api.box3.work/api/Contato';
 
 var xhttp = new XMLHttpRequest();
-xhttp.open('GET', url, true);
+xhttp.open('GET', api, true);
 
 xhttp.onreadystatechange = () => {
   var contactsDisplay = document.querySelector('#contacts-display');
@@ -37,7 +37,7 @@ function excluirContato(id) {
   if (!retorno) return;
 
   var xhr = new XMLHttpRequest();
-  xhr.open('DELETE', url + `/${id}`);
+  xhr.open('DELETE', api + `/${id}`);
   xhr.onreadystatechange = () => {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       window.location.reload();
