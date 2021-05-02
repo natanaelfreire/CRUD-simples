@@ -1,7 +1,6 @@
 function criarContato(event) {
   event.preventDefault();
 
-  var regex = new RegExp('\\([0-9]{2}\\)\\s[0-9]{4}-[0-9]{4}', 'g');
   var nome = document.querySelector('#inputName').value;
   var email = document.querySelector('#inputEmail').value;
   var telefone = document.querySelector('#inputPhone').value;
@@ -24,6 +23,8 @@ function criarContato(event) {
 
     return;
   }
+
+  var regex = new RegExp('\\([0-9]{2}\\)\\s[0-9]{4}-[0-9]{4}', 'g');
 
   if (!regex.test(telefone)) {
     var mensagem = document.querySelector('#mensagem');
